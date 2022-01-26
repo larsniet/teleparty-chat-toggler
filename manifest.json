@@ -1,0 +1,36 @@
+{
+  "name": "Teleparty chat toggler",
+  "description": "Toggles that annoying chat sidebar in Teleparty!",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/teleparty-chat-toggler16.png",
+      "32": "/images/teleparty-chat-toggler32.png",
+      "48": "/images/teleparty-chat-toggler48.png",
+      "128": "/images/teleparty-chat-toggler128.png"
+    }
+  },
+  "icons": {
+    "16": "/images/teleparty-chat-toggler16.png",
+    "32": "/images/teleparty-chat-toggler32.png",
+    "48": "/images/teleparty-chat-toggler48.png",
+    "128": "/images/teleparty-chat-toggler128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://netflix.com/*"
+      ],
+      "js": [
+        "setup-script.js"
+      ]
+    }
+  ]
+}
